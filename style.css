@@ -1,0 +1,71 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+ 
+  padding: 14px 40px;
+  
+  background-image: url(./img/sky.jpeg);
+}
+
+.header-logo {
+  height: 60px;
+
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-nav a {
+    font-family: "Barrio", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    font-size: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+.header-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+.header-item a {
+    font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+.main {
+  height: 500px;
+    
+}
+.adout {
+}
+.products {
+}
+.Technologies {
+}
+footer {
+  position: relative;
+}
+.background {
+  width: 100%;
+  object-fit: cover;
+  
+}
+.tardis {
+  width: 214px;
+  position: absolute;
+  z-index: 2;
+  right: 373px;
+  top: 275px;
+}
