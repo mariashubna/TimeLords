@@ -1,49 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Madimi+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barrio&family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="header">
-        <nav class="header-nav">
-            <a>
-                <img class="header-logo" src="./img/doctor-who-tardis-png.webp" alt="">
-                TimeLord
-            </a>
-        
-            <ul class="header-list">
-                <li class="header-item">
-                    <a>
-                        About us
-                    </a>
-                </li>
-                <li class="header-item">
-                    <a>
-                        About product
-                    </a>
-                </li>
-                <li class="header-item">
-                    <a>
-                        Technologies
-                    </a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="header-nav">
+        <a>
+          <img
+            class="header-logo"
+            src="./img/doctor-who-tardis-png.webp"
+            alt=""
+          />
+          Time Lords
+        </a>
+
+        <ul class="header-list">
+          <li class="header-item">
+            <a href="#about"> About us </a>
+          </li>
+          <li class="header-item">
+            <a a href="#products"> About product </a>
+          </li>
+          <li class="header-item">
+            <a href="#packages"> Packages </a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="main">
-        <section class="adout"></section>
-        <section class="products"></section>
-        <section class="Technologies"></section>
+      <section class="tardis_main">
+        <img src="./img/logo.png" alt="" />
+        <div>
+            <p class="tardis-text">TARDIS: If you forget something, ask me using help command.</p>
+        <p class="tardis-info">
+          Across the streams of time, in the vast library of the universe, lie
+          the moments captured, in the whispers of these titles... Each a
+          gateway, each a story, within the endless space of notes!
+        </p>
+        </div>
+      </section>
+      <section class="about" id="about">
+        <h2>Our team</h2>
+        <ul class="team-list">
+            <li>
+                <img class="photo" src="./img/1.jpg" alt="">
+                <p class="name">Roman Turas</p>
+                <p class="role">Developer</p>
+            </li>
+            <li>
+                <img class="photo" src="./img/2.jpg" alt="">
+                <p class="name">Mariia Svinitska</p>
+                <p class="role">Developer</p>
+            </li>
+            <li>
+                <img class="photo" src="./img/3.jpg" alt="">
+                <p class="name">Viktoriia Didenko</p>
+                <p class="role">Developer</p>
+            </li>
+            <li>
+                <img class="photo" src="./img/4.jpg" alt="">
+                <p class="name">Mykhailo Martyniuk</p>
+                <p class="role">Developer</p>
+            </li>
+            <li>
+                <img class="photo" src="./img/5.jpg" alt="">
+                <p class="name">Dmytro Mayevsky</p>
+                <p class="role">Team Lead</p>
+            </li>
+            <li>
+                <img class="photo" src="./img/6.jpg" alt="">
+                <p class="name">Hanna Dunska</p>
+                <p class="role">Scrum Master</p>
+            </li>
+        </ul>
 
+      </section>
+      <section class="products" id="products">
+        <h2>
+            Problems addressed by the TARDIS Personal Assistant
+        </h2>
+        <div class="about-group">
+            <div class="about-wrap">
+                <h3>Miscellaneous Commands:</h3>
+                <ul class="about-list">
+                    <li>hello</li>
+                    <li>about</li>
+                    <li>help</li>
+                    <li>war statistics</li>
+                </ul>
+            </div>
+            <div class="about-wrap">
+                <h3>Contact Commands:</h3>
+                <ul class="about-list">
+                    <li>create</li>
+                    <li>change</li>
+                    <li>delete</li>
+                    <li>show</li>
+                    <li>show all</li>
+                    <li>show birthdays</li>
+                    <li>search</li>
+                </ul>
+            </div>
+            <div class="about-wrap">
+                <h3>Note Commands:</h3>
+                <ul class="about-list">
+                    <li>add</li>
+                    <li>change</li>
+                    <li>delete</li>
+                    <li>show</li>
+                    <li>search</li>
+                    <li>ilter by tag</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section class="packages" id="packages">
+        <h2>Packages</h2>
+        <ul class="packages-list">
+            <li><img class="packages-img" src="./img/python.png" alt=""></li>
+            <li class="packages-text">colorama</li>
+            <li class="packages-text">requests</li>
+            <li><img class="packages-img" src="./img/prompt.png" alt=""></li>
+            
+        </ul>
+
+      </section>
     </main>
     <footer>
-        <img class="background"  src="./img/sky.jpeg" alt="">
-        <img class="tardis" src="./img//doctor-who-tardis-png.webp" alt="">
+      <img class="background" src="./img/sky.jpeg" alt="" />
+      <img class="tardis" src="./img//doctor-who-tardis-png.webp" alt="" />
     </footer>
-</body>
+  </body>
 </html>

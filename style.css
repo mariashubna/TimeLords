@@ -1,13 +1,14 @@
-body {
+body, ul {
   padding: 0;
   margin: 0;
 }
 
 .header {
  
-  padding: 14px 40px;
-  
+  padding: 24px 40px;
+  background-size: cover;
   background-image: url(./img/sky.jpeg);
+  box-shadow: 0 4px 16px 0 rgba(17, 17, 17, 0.1);
 }
 
 .header-logo {
@@ -29,6 +30,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    text-decoration: none;
 
 }
 .header-list {
@@ -45,14 +47,121 @@ body {
   color: white;
 }
 .main {
-  height: 500px;
-    
+    background-image: url(./img/back.avif);
+    background: linear-gradient(90deg, rgba(0,0,57,1) 28%, rgba(20,20,71,1) 65%, rgba(7,33,47,1) 81%);
 }
-.adout {
+.tardis_main {
+  padding: 24px 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 40px;
+}
+.tardis_main img {
+  width: 500px;
+}
+.tardis_main div{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.tardis-text {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: -150px;
+
+}
+.tardis-info {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 100px;
+
+
+}
+.about {
+  padding: 34px 40px;
+
+}
+.about h2{
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.photo {
+  border-radius: 80px;
+  height: 150px;
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 900px;
+  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+  
+}
+.team-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.name {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+}
+
+.role {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 16px;
+  margin: 0;
 }
 .products {
+  padding: 40px 40px;
+
+
 }
-.Technologies {
+.products h2{
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+.packages {
+  padding: 30px 40px;
+
+
+}
+.packages h2{
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 footer {
   position: relative;
@@ -68,4 +177,53 @@ footer {
   z-index: 2;
   right: 373px;
   top: 275px;
+}
+.about-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.about-group {
+  display: flex;  
+  gap: 80px;
+  justify-content: space-evenly;
+}
+
+.about-wrap h3 {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 30px;
+  margin: 0;
+  text-decoration: underline;
+  
+}
+.about-list {
+  display: flex;
+  flex-direction: column;
+  list-style: circle ;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 23px;
+  gap: 20px;
+}
+.packages-img {
+  height: 150px;
+
+}
+.packages-list {
+  display: flex;
+  list-style: none;
+  gap: 150px;
+  align-items: center;
+  justify-content: center;
+}
+.packages-text {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 30px;
+  
+  ;
 }
