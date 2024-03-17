@@ -1,54 +1,72 @@
-body, ul {
+body,
+ul {
   padding: 0;
   margin: 0;
 }
 
 .header {
- 
+  display: flex;
+  justify-content: space-between;
   padding: 24px 40px;
   background-size: cover;
   background-image: url(./img/sky.jpeg);
   box-shadow: 0 4px 16px 0 rgba(17, 17, 17, 0.1);
 }
+.logo-link {
+  font-family: "Barrio", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 32px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header div {
+  display: flex;
+  align-items: center;
+}
 
 .header-logo {
   height: 60px;
-
 }
 .header-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.header-nav a {
-    font-family: "Barrio", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    cursor: pointer;
-    font-size: 32px;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
 
-}
 .header-list {
   display: flex;
   list-style: none;
   gap: 20px;
 }
-.header-item a {
-    font-family: "Madimi One", sans-serif;
+.nav-link {
+  font-family: "Madimi One", sans-serif;
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
   font-size: 24px;
   color: white;
+  text-decoration: none;
+}
+.burger-icon {
+  background-color: transparent;
+  border: none;
+}
+.burger-icon img {
+  width: 40px;
+  display: none;
 }
 .main {
-    background-image: url(./img/back.avif);
-    background: linear-gradient(90deg, rgba(0,0,57,1) 28%, rgba(20,20,71,1) 65%, rgba(7,33,47,1) 81%);
+  background-image: url(./img/back.avif);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 57, 1) 28%,
+    rgba(20, 20, 71, 1) 65%,
+    rgba(7, 33, 47, 1) 81%
+  );
 }
 .tardis_main {
   padding: 24px 40px;
@@ -61,7 +79,7 @@ body, ul {
 .tardis_main img {
   width: 500px;
 }
-.tardis_main div{
+.tardis_main div {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -76,7 +94,14 @@ body, ul {
   position: absolute;
   right: 0;
   top: -150px;
-
+}
+.tardis-second {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 10px;
 }
 .tardis-info {
   font-family: "Madimi One", sans-serif;
@@ -85,14 +110,12 @@ body, ul {
   font-size: 20px;
   position: absolute;
   right: 100px;
-
-
 }
 .about {
   padding: 34px 40px;
-
+  position: relative;
 }
-.about h2{
+.about h2 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
@@ -114,7 +137,6 @@ body, ul {
   margin-right: auto;
   margin-left: auto;
   justify-content: center;
-  
 }
 .team-list li {
   display: flex;
@@ -137,12 +159,63 @@ body, ul {
   font-size: 16px;
   margin: 0;
 }
+.clients {
+  padding: 34px 40px;
+  position: relative;
+}
+.clients-header {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.clients div {
+  display: flex;
+  gap: 140px;
+}
+.clients-photo {
+  border-radius: 220px;
+  width: 400px;
+  height: 400px;
+}
+.clients-name {
+  font-family: "Barrio", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 510px;
+  left: 171px;
+  transform: translate(50%, -50%) rotate(320deg);
+}
+.clients-item {
+  display: flex;
+  list-style: none;
+}
+.clients-item h3 {
+  font-family: "Barrio", system-ui;
+  font-weight: 400;
+  color: wheat;
+  font-size: 28px;
+  margin: 0;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+.clients-item p {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
 .products {
   padding: 40px 40px;
-
-
 }
-.products h2{
+.products h2 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
@@ -151,11 +224,10 @@ body, ul {
   margin-bottom: 70px;
 }
 .packages {
-  padding: 30px 40px;
-
-
+  padding: 60px 40px 150px;
+  position: relative;
 }
-.packages h2{
+.packages h2 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
@@ -169,7 +241,6 @@ footer {
 .background {
   width: 100%;
   object-fit: cover;
-  
 }
 .tardis {
   width: 214px;
@@ -184,7 +255,7 @@ footer {
   gap: 30px;
 }
 .about-group {
-  display: flex;  
+  display: flex;
   gap: 80px;
   justify-content: space-evenly;
 }
@@ -196,12 +267,11 @@ footer {
   font-size: 30px;
   margin: 0;
   text-decoration: underline;
-  
 }
 .about-list {
   display: flex;
   flex-direction: column;
-  list-style: circle ;
+  list-style: circle;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
@@ -210,7 +280,6 @@ footer {
 }
 .packages-img {
   height: 150px;
-
 }
 .packages-list {
   display: flex;
@@ -218,12 +287,38 @@ footer {
   gap: 150px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .packages-text {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
   font-size: 30px;
-  
-  ;
+}
+.planets {
+  position: absolute;
+  height: 272px;
+  top: -100px;
+  right: 82px;
+}
+.planet {
+  position: absolute;
+  height: 272px;
+  bottom: -70px;
+  left: 82px;
+}
+.planet2 {
+  position: absolute;
+  height: 172px;
+  top: -150px;
+  left: 382px;
+}
+.planet3 {
+  position: absolute;
+  height: 122px;
+  bottom: 250px;
+  right: -82px;
 }
