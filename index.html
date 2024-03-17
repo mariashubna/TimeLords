@@ -37,11 +37,10 @@
               <a class="nav-link" href="#products"> About product </a>
             </li>
             <li class="header-item">
-              <a class="nav-link" href="#packages"> Packages </a>
-            </li>
+              <a class="nav-link" href="#packages"> Technologies</a>
           </ul>
         </nav>
-        <button class="burger-icon">
+        <button class="burger-icon" data-modal-open>
           <img src="./img/burger.svg" />
         </button>
       </div>
@@ -50,18 +49,17 @@
       <section class="tardis_main">
         <img src="./img/logo.png" alt="" />
         <div>
-          <p class="tardis-text">
-            TARDIS: If you forget something, ask me using help command.
-          </p>
-          <p class="tardis-second">
-            Each a gateway, each a story, within the endless space of contacts &
-            notes!
-          </p>
+          <div class="hidden-wrap">
+            <p class="tardis-text">
+                TARDIS: If you forget something, ask me using help command.
+              </p>
+          </div>
 
           <p class="tardis-info">
             Across the streams of time, in the vast library of the universe, lie
             the moments captured, in the whispers of these titles... Each a
-            gateway, each a story, within the endless space of notes!
+            gateway, each a story, within the endless space of contacts &
+            notes!
           </p>
         </div>
       </section>
@@ -107,8 +105,9 @@
         <h2 class="clients-header">Our clients</h2>
         <div>
           <img class="clients-photo" src="./img/doctor.jpg" alt="" />
-          <h1 class="clients-name">Doctor Who</h1>
+          
           <div class="clients-wrap">
+            <h1 class="clients-name">Doctor Who</h1>
             <ul class="clients-list">
               <li class="clients-item">
                 <h3>Real Name:</h3>
@@ -189,7 +188,7 @@
         </div>
       </section>
       <section class="packages" id="packages">
-        <h2>Packages</h2>
+        <h2>Technologies</h2>
         <img class="planet2" src="./img/planet2.png" alt="">
         <img class="planet3" src="./img/planet3.png" alt="">
         <ul class="packages-list">
@@ -214,7 +213,11 @@
       <img class="background" src="./img/sky.jpeg" alt="" />
       <img class="tardis" src="./img//doctor-who-tardis-png.webp" alt="" />
     </footer>
-    <div class="burger-menu">
+    <div data-modal class="modal-wrap is-hidden burger-menu" >
+        <div class="modal-content">
+            <button type="button" data-modal-close class="modal-closed-btn">
+                <p class="closed-btn" > X</p>
+              </button>
       <ul class="burger-list">
         <li class="burger-item">
           <a href="#about"> About us </a>
@@ -223,12 +226,15 @@
           <a href="#clients"> Our clients </a>
         </li>
         <li class="burger-item">
-          <a a href="#products"> About product </a>
+          <a href="#products"> About product </a>
         </li>
         <li class="burger-item">
-          <a href="#packages"> Packages </a>
+          <a href="#packages"> Technologies </a>
         </li>
       </ul>
+      </div>
     </div>
+    <script src="./script.js"></script>
   </body>
+  
 </html>

@@ -1,3 +1,18 @@
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes rotatePlanet {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 body,
 ul {
   padding: 0;
@@ -17,11 +32,15 @@ ul {
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
-  font-size: 32px;
+  font-size: 22px;
   color: white;
   display: flex;
   align-items: center;
   gap: 8px;
+
+  @media screen and (min-width: 400px) {
+    font-size: 32px;
+  }
 }
 .header div {
   display: flex;
@@ -38,9 +57,13 @@ ul {
 }
 
 .header-list {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+  display: none;
+
+  @media screen and (min-width: 1000px) {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+  }
 }
 .nav-link {
   font-family: "Madimi One", sans-serif;
@@ -50,14 +73,23 @@ ul {
   font-size: 24px;
   color: white;
   text-decoration: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover {
+  color: wheat;
 }
 .burger-icon {
   background-color: transparent;
   border: none;
+  cursor: pointer;
+
+  @media screen and (min-width: 1000px) {
+    display: none;
+  }
 }
 .burger-icon img {
   width: 40px;
-  display: none;
 }
 .main {
   background-image: url(./img/back.avif);
@@ -70,14 +102,21 @@ ul {
 }
 .tardis_main {
   padding: 24px 40px;
-
   display: flex;
   align-items: center;
   gap: 50px;
   padding: 40px;
+  flex-direction: column;
+
+  @media screen and (min-width: 800px) {
+    flex-direction: row;
+  }
 }
 .tardis_main img {
-  width: 500px;
+  width: 300px;
+  @media screen and (min-width: 1100px) {
+    width: 400px;
+  }
 }
 .tardis_main div {
   position: relative;
@@ -86,42 +125,62 @@ ul {
   align-items: center;
   width: 100%;
 }
+
+.hidden-wrap {
+  display: inline-block;
+
+}
 .tardis-text {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
   font-size: 20px;
-  position: absolute;
-  right: 0;
-  top: -150px;
+  animation: blink 2s infinite;
+
+  @media screen and (min-width: 800px) {
+    position: absolute;
+    right: 0;
+    top: -100px;    
+  }
 }
-.tardis-second {
-  font-family: "Madimi One", sans-serif;
-  font-weight: 400;
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  bottom: 10px;
-}
+
 .tardis-info {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
   font-size: 20px;
-  position: absolute;
-  right: 100px;
+
+  line-height: 1.5;
+  max-width: 1130px;
+
+  @media screen and (min-width: 800px) {
+    position: absolute;
+    right: 100px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    line-height: 2;
+  }
 }
 .about {
-  padding: 34px 40px;
+  padding: 80px 40px;
   position: relative;
+
+  @media screen and (min-width: 830px) {
+    padding: 34px 40px;
+  }
 }
 .about h2 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 880px) {
+    font-size: 50px;
+  }
 }
 .photo {
   border-radius: 80px;
@@ -130,7 +189,7 @@ ul {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  width: 900px;
+  max-width: 900px;
   gap: 50px;
   list-style: none;
   padding: 0;
@@ -143,12 +202,14 @@ ul {
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  width: 180px;
 }
 .name {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
   font-size: 20px;
+  text-align: center;
   margin: 0;
 }
 
@@ -167,18 +228,44 @@ ul {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 880px) {
+    font-size: 50px;
+  }
 }
 .clients div {
   display: flex;
-  gap: 140px;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (min-width: 1100px) {
+    flex-direction: row;
+    gap: 140px;
+  }
 }
 .clients-photo {
   border-radius: 220px;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 880px) {
+    width: 300px;
+    height: 300px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 400px;
+    height: 400px;
+  }
 }
 .clients-name {
   font-family: "Barrio", system-ui;
@@ -186,30 +273,53 @@ ul {
   font-style: normal;
   color: white;
   font-size: 50px;
-  position: absolute;
-  top: 510px;
-  left: 171px;
-  transform: translate(50%, -50%) rotate(320deg);
+  text-align: center;
+  animation: blink 5s infinite;
+
+  @media screen and (min-width: 1100px) {
+    position: absolute;
+    top: 549px;
+    left: 48px;
+    transform: translate(50%, -50%) rotate(320deg);
+  }
+  @media screen and (min-width: 1200px) {
+    left: 230px;
+    top: 520px;
+  }
 }
 .clients-item {
   display: flex;
   list-style: none;
+  flex-direction: column;
+
+  @media screen and (min-width: 580px) {
+    flex-direction: row;
+  }
 }
 .clients-item h3 {
   font-family: "Barrio", system-ui;
   font-weight: 400;
   color: wheat;
-  font-size: 28px;
+  font-size: 22px;
   margin: 0;
   margin-right: 30px;
   margin-bottom: 10px;
+  margin-top: 10px;
+
+  @media screen and (min-width: 580px) {
+    font-size: 28px;
+  }
 }
 .clients-item p {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 24px;
+  font-size: 18px;
   margin: 0;
+
+  @media screen and (min-width: 580px) {
+    font-size: 24px;
+  }
 }
 
 .products {
@@ -219,9 +329,13 @@ ul {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
   margin-bottom: 70px;
+
+  @media screen and (min-width: 880px) {
+    font-size: 50px;
+  }
 }
 .packages {
   padding: 60px 40px 150px;
@@ -231,9 +345,16 @@ ul {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 50px;
+  font-size: 30px;
   text-align: center;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 880px) {
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
 }
 footer {
   position: relative;
@@ -243,54 +364,105 @@ footer {
   object-fit: cover;
 }
 .tardis {
-  width: 214px;
+  width: 114px;
   position: absolute;
   z-index: 2;
-  right: 373px;
-  top: 275px;
+  right: 73px;
+  bottom: 30px;
+
+  @media screen and (min-width: 500px) {
+    right: 273px;
+    bottom: 100px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: 214px;
+    top: 275px;
+    right: 373px;
+  }
 }
 .about-wrap {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  align-items: center;
+
+  @media screen and (min-width: 880px) {
+    align-items: start;
+  }
 }
 .about-group {
   display: flex;
-  gap: 80px;
+  gap: 40px;
   justify-content: space-evenly;
+  flex-direction: column;
+
+  @media screen and (min-width: 880px) {
+    font-size: 30px;
+    flex-direction: row;
+    gap: 80px;
+    align-items: start;
+  }
 }
 
 .about-wrap h3 {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 30px;
+  font-size: 24px;
   margin: 0;
   text-decoration: underline;
+  text-align: center;
+
+  @media screen and (min-width: 880px) {
+    font-size: 30px;
+  }
 }
 .about-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   list-style: circle;
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   color: white;
-  font-size: 23px;
-  gap: 20px;
+  font-size: 18px;
+  row-gap: 10px;
+  column-gap: 66px;
+  justify-content: center;
+
+  @media screen and (min-width: 880px) {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: unset;
+  }
+
+  @media screen and (min-width: 880px) {
+    font-size: 23px;
+  }
 }
 .packages-img {
-  height: 150px;
+  height: 90px;
+
+  @media screen and (min-width: 880px) {
+    height: 150px;
+  }
 }
 .packages-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  gap: 150px;
+  gap: 50px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: 880px) {
+    gap: 150px;
+  }
 }
 .packages-text {
   font-family: "Madimi One", sans-serif;
@@ -300,25 +472,153 @@ footer {
 }
 .planets {
   position: absolute;
-  height: 272px;
-  top: -100px;
-  right: 82px;
+  height: 150px;
+  top: -65px;
+  right: 2px;
+  animation: rotatePlanet 60s linear infinite;
+  @media screen and (min-width: 690px) {
+    top: 0;
+  }
+  @media screen and (min-width: 1050px) {
+    height: 200px;
+    top: -50px;
+    right: 82px;
+  }
+  @media screen and (min-width: 1150px) {
+    height: 272px;
+    top: -100px;
+  }
 }
 .planet {
   position: absolute;
-  height: 272px;
-  bottom: -70px;
-  left: 82px;
+  height: 142px;
+  bottom: -100px;
+  left: 42px;
+  animation: rotatePlanet 90s linear infinite;
+
+  @media screen and (min-width: 940px) {
+    height: 172px;
+    bottom: -70px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    height: 272px;
+    left: 82px;
+  }
 }
 .planet2 {
   position: absolute;
-  height: 172px;
-  top: -150px;
-  left: 382px;
+  height: 122px;
+  top: -31px;
+  left: 82px;
+  animation: rotatePlanet 20s linear infinite;
+
+  @media screen and (min-width: 880px) {
+    left: 182px;
+    top: -150px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 172px;
+    left: 282px;
+  }
 }
 .planet3 {
   position: absolute;
-  height: 122px;
-  bottom: 250px;
-  right: -82px;
+  height: 82px;
+  bottom: 45px;
+  right: 0;
+  animation: rotatePlanet 60s linear infinite;
+
+  @media screen and (min-width: 880px) {
+    height: 122px;
+    bottom: 90px;
+  }
 }
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(46, 47, 66, 0.9);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 200px;
+  height: 250px;
+  background-image: url(./img/burger-backgr.jpg);
+  background-size: cover;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 20px 20px;
+}
+.modal-closed-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.closed-btn {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-closed-btn:hover,
+.modal-closed-btn:focus {
+  transform: scale(1.1);
+}
+
+.burger-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.burger-list li:nth-child(2) {
+  margin-bottom: 130px;
+}
+.burger-item a {
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.burger-item a:hover {
+  color: wheat;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+
