@@ -474,7 +474,7 @@ footer {
   position: absolute;
   height: 150px;
   top: -65px;
-  right: 2px;
+  right: 35px;
   animation: rotatePlanet 60s linear infinite;
   @media screen and (min-width: 690px) {
     top: 0;
@@ -527,7 +527,7 @@ footer {
   position: absolute;
   height: 82px;
   bottom: 45px;
-  right: 0;
+  right: 71px;
   animation: rotatePlanet 60s linear infinite;
 
   @media screen and (min-width: 880px) {
